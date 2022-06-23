@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom"
 import { useState } from "react"
 import { ModalTec } from "../../components/ModalTec"
 import { Tecnologies } from "../../components/Tecnologies"
+import { StyleHome } from "./style"
 
 export const Home = ({authenticated, setAuthenticated})=>{
     const [techs, setTechs] = useState([])
@@ -20,15 +21,15 @@ export const Home = ({authenticated, setAuthenticated})=>{
         return <Navigate to="/Login" replace/>
     }else{
     return(
-        <>
+        <StyleHome>
             <Header page='Home' authenticated={authenticated} setAuthenticated={setAuthenticated}/>
             <main>
-                <section>
-                    <div>
+                <section className="header">
+                    <div className="apresentation">
                         <h2>Olá, {user?.name}</h2>
                         <span>{user?.course_module}</span>
                     </div>
-                    <div>
+                    <div className="tecnologies">
                         <h3>Tecnologias</h3>
                         <button onClick={handleAddTec}>+</button>
                     </div>
@@ -51,7 +52,7 @@ export const Home = ({authenticated, setAuthenticated})=>{
                     />
                 </div>
             </main>
-        </>
+        </StyleHome>
     )
     }
 }

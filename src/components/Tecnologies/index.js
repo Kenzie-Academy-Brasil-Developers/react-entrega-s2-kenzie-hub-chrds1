@@ -16,7 +16,6 @@ export const Tecnologies = ({ techs, setTechs, atualization, setAtualization})=>
         }
     ]
 
-
     useEffect(()=>{
         if(atualization){
             api

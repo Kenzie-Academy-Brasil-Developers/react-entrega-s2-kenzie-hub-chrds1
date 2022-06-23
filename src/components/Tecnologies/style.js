@@ -21,5 +21,18 @@ export const StyleTecnologies = styled.div`
         background-color: var(--grey-2);
         border-radius: 0.5rem;
     }
-
+    
+    .card button{
+        background-color: var(--grey-2);
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        color: var(--grey-0);
+        &:hover{
+            background-color: var(--grey-1);
+        }
+        &:active{
+            background-color: var(--grey-2);
+        }
+    }
 `
